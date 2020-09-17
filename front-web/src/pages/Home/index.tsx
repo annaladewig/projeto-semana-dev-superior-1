@@ -17,7 +17,7 @@ const Home = () => (
                 <div className="home-actions">
                     <button className="home-btn">
                         QUERO SABER QUAIS SÃO
-            </button>
+                    </button>
                     <div className="home-btn-icon">
                         <ArrowIcon />
                     </div>
