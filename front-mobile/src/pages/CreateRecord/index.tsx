@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesome5 as Icon } from '@expo/vector-icons';
-import { StyleSheet, View, TextInput, Text, Alert } from 'react-native';
+import { StyleSheet, View, TextInput, Text, Alert, Platform } from 'react-native';
 import Header from '../../components/Header';
 import PlatformCard from './PlatformCard';
 import { GamePlatform, Game } from './types';
@@ -14,7 +14,7 @@ const placeholder = {
     value: null
 }
 
-const BASE_URL = "http://192.168.0.10:8080";
+const BASE_URL = 'http://192.168.0.10:8080';
 
 const mapSelectValues = (games: Game[]) => {
     return games.map(game => ({
@@ -43,7 +43,7 @@ const CreateRecord = () => {
 
     const handleSubmit = () => {
         const payload = { name, age, gameId: selectedGame };
-
+        
         axios.post(`${BASE_URL}/records`, payload)
         .then(() => {
             Alert.alert('Dados salvos com sucesso!');
@@ -107,7 +107,7 @@ const CreateRecord = () => {
                         setSelectedGame(value);
                     }}
                     placeholder={placeholder}
-                    value={selectedGame}
+                    value={Platform.OS === "ios" ? selectedGame != null ? selectedGame : null : undefined}
                     items={filteredGames}
                     style={pickerSelectStyles}
                     Icon={() => {
