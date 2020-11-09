@@ -3,7 +3,7 @@ Projeto da aplicação **Big Game Survey**, para web e mobile, da Semana DevSupe
 
 Link de acesso à plataforma web: https://sds1-anna.netlify.app/
 
-Obs: É normal a página demorar um pouco para carregar, pois ela está hospedada em uma versão gratuita da plataforma.
+⚠️ É normal a página demorar um pouco para carregar, pois ela está hospedada em uma versão gratuita da plataforma.
 
 **Tecnologias utilizadas:**
 * Java com Spring-boot
